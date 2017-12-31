@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7957A333-8308-41CE-85F0-9294DAB59E4E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StackManagement</RootNamespace>
+    <AssemblyName>StackManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\user\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gateway\CategoryGateway.cs" />
+    <Compile Include="Gateway\CompanyGateway.cs" />
+    <Compile Include="Gateway\Gateway.cs" />
+    <Compile Include="Gateway\ItemGateway.cs" />
+    <Compile Include="Gateway\LoginGateway.cs" />
+    <Compile Include="Gateway\SaleViewGateway.cs" />
+    <Compile Include="Gateway\Serch_View_Gateway.cs" />
+    <Compile Include="Gateway\StockInGateway.cs" />
+    <Compile Include="Gateway\StockOutGatway.cs" />
+    <Compile Include="Manager\CategoriManager.cs" />
+    <Compile Include="Manager\CompanyManager.cs" />
+    <Compile Include="Manager\ItemManager.cs" />
+    <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Manager\SaleManager.cs" />
+    <Compile Include="Manager\Serch_View_Manager.cs" />
+    <Compile Include="Manager\StockManager.cs" />
+    <Compile Include="Manager\StockOutManager.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\SaleView.cs" />
+    <Compile Include="Model\Serch_View.cs" />
+    <Compile Include="Model\StockIn.cs" />
+    <Compile Include="Model\StockOut.cs" />
+    <Compile Include="Report\SaledReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaledReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SaleReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\SaleReportView.Designer.cs">
+      <DependentUpon>SaleReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeshbordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeshbordForm.Designer.cs">
+      <DependentUpon>DeshbordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Serch_View_From.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Serch_View_From.Designer.cs">
+      <DependentUpon>Serch_View_From.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SpalshScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SpalshScreen.Designer.cs">
+      <DependentUpon>SpalshScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StockInFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StockInFrom.Designer.cs">
+      <DependentUpon>StockInFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StockOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StockOutForm.Designer.cs">
+      <DependentUpon>StockOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewSellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ViewSellForm.Designer.cs">
+      <DependentUpon>ViewSellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WaitPrograss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WaitPrograss.Designer.cs">
+      <DependentUpon>WaitPrograss.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\SaledReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SaledReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SaleReportView.resx">
+      <DependentUpon>SaleReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeshbordForm.resx">
+      <DependentUpon>DeshbordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Serch_View_From.resx">
+      <DependentUpon>Serch_View_From.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SpalshScreen.resx">
+      <DependentUpon>SpalshScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockInFrom.resx">
+      <DependentUpon>StockInFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockOutForm.resx">
+      <DependentUpon>StockOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewSellForm.resx">
+      <DependentUpon>ViewSellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WaitPrograss.resx">
+      <DependentUpon>WaitPrograss.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StockManagementDataSet.xsc">
+      <DependentUpon>StockManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StockManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StockManagementDataSet.xss">
+      <DependentUpon>StockManagementDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-png-image-51342-%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-blue-arrow-redo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-png-image-51342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-png-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-botton-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons_password-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Serch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serchcat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-botton-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-botton-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-left-arrow-botton-323.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

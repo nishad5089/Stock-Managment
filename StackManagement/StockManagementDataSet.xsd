@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StockManagementDataSet" targetNamespace="http://tempuri.org/StockManagementDataSet.xsd" xmlns:mstns="http://tempuri.org/StockManagementDataSet.xsd" xmlns="http://tempuri.org/StockManagementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StockManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StockManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.StackManagement.Properties.Settings.GlobalReference.Default.StockManagementConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="saleViewTableAdapter" GeneratorDataComponentClassName="saleViewTableAdapter" Name="saleView" UserDataComponentName="saleViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StockManagementConnectionString (Settings)" DbObjectName="StockManagement.dbo.saleView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT takenQuentity, item_id, itemName, insert_date, sell_item FROM dbo.saleView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="takenQuentity" DataSetColumn="takenQuentity" />
+              <Mapping SourceColumn="item_id" DataSetColumn="item_id" />
+              <Mapping SourceColumn="itemName" DataSetColumn="itemName" />
+              <Mapping SourceColumn="insert_date" DataSetColumn="insert_date" />
+              <Mapping SourceColumn="sell_item" DataSetColumn="sell_item" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StockManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StockManagementDataSet" msprop:Generator_UserDSName="StockManagementDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="saleView" msprop:Generator_TableClassName="saleViewDataTable" msprop:Generator_TableVarName="tablesaleView" msprop:Generator_TablePropName="saleView" msprop:Generator_RowDeletingName="saleViewRowDeleting" msprop:Generator_RowChangingName="saleViewRowChanging" msprop:Generator_RowEvHandlerName="saleViewRowChangeEventHandler" msprop:Generator_RowDeletedName="saleViewRowDeleted" msprop:Generator_UserTableName="saleView" msprop:Generator_RowChangedName="saleViewRowChanged" msprop:Generator_RowEvArgName="saleViewRowChangeEvent" msprop:Generator_RowClassName="saleViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="takenQuentity" msprop:Generator_ColumnVarNameInTable="columntakenQuentity" msprop:Generator_ColumnPropNameInRow="takenQuentity" msprop:Generator_ColumnPropNameInTable="takenQuentityColumn" msprop:Generator_UserColumnName="takenQuentity" type="xs:int" minOccurs="0" />
+              <xs:element name="item_id" msprop:Generator_ColumnVarNameInTable="columnitem_id" msprop:Generator_ColumnPropNameInRow="item_id" msprop:Generator_ColumnPropNameInTable="item_idColumn" msprop:Generator_UserColumnName="item_id" type="xs:int" minOccurs="0" />
+              <xs:element name="itemName" msprop:Generator_ColumnVarNameInTable="columnitemName" msprop:Generator_ColumnPropNameInRow="itemName" msprop:Generator_ColumnPropNameInTable="itemNameColumn" msprop:Generator_UserColumnName="itemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="insert_date" msprop:Generator_ColumnVarNameInTable="columninsert_date" msprop:Generator_ColumnPropNameInRow="insert_date" msprop:Generator_ColumnPropNameInTable="insert_dateColumn" msprop:Generator_UserColumnName="insert_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sell_item" msprop:Generator_ColumnVarNameInTable="columnsell_item" msprop:Generator_ColumnPropNameInRow="sell_item" msprop:Generator_ColumnPropNameInTable="sell_itemColumn" msprop:Generator_UserColumnName="sell_item" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
